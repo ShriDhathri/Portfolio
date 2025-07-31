@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Award, BookOpen, Users, Trophy, Code, Star, Calendar, MapPin, Brain, Zap, Database, BarChart3, FileSpreadsheet, Activity, Target, Cpu, Bot, Search } from 'lucide-react'
+import { Users, Trophy, Code, Star, Calendar, MapPin, Brain, Database, BarChart3, FileSpreadsheet, Activity, Target,  Bot} from 'lucide-react'
 
 const Achievements = () => {
     return (
