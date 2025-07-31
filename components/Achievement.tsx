@@ -22,7 +22,6 @@ interface Certification {
     icon: React.ReactNode;
     color: string;
     certificateUrl: string;
-    verifyUrl: string;
 }
 
 const Achievements = () => {
@@ -116,52 +115,46 @@ const achievementsData: AchievementData[] = [
 
 const certificationsData: Certification[] = [
     {
-        title: "Python for Everybody",
-        provider: "University of Michigan",
-        icon: <Code size={24} />,
-        color: "blue",
-        certificateUrl: "/certificates/python-for-everybody.pdf",
-        verifyUrl: "https://coursera.org/verify/certificate-id"
-    },
-    {
-        title: "Data Analysis using Excel",
-        provider: "Microsoft",
-        icon: <FileSpreadsheet size={24} />,
-        color: "green",
-        certificateUrl: "/certificates/excel-data-analysis.pdf",
-        verifyUrl: "https://docs.microsoft.com/learn/certifications"
-    },
-    {
-        title: "Power BI Certification",
-        provider: "Infosys Springboard",
-        icon: <BarChart3 size={24} />,
-        color: "orange",
-        certificateUrl: "/certificates/power-bi-certification.pdf",
-        verifyUrl: "https://infyspringboard.onwingspan.com/verify"
-    },
-    {
-        title: "Python for Data Science",
-        provider: "IBM",
-        icon: <Database size={24} />,
-        color: "blue",
-        certificateUrl: "/certificates/python-data-science-ibm.pdf",
-        verifyUrl: "https://coursera.org/verify/ibm-certificate"
-    },
-    {
         title: "AI & Machine Learning",
-        provider: "Google",
+        provider: "Infosys",
         icon: <Bot size={24} />,
         color: "purple",
-        certificateUrl: "/certificates/ai-ml-google.pdf",
-        verifyUrl: "https://coursera.org/verify/google-certificate"
+        certificateUrl: "/certificates/AIML Infosys Springboard_page-0001.jpg",
     },
     {
-        title: "Problem Solving (100+)",
-        provider: "LeetCode Platform",
+        title: "Tableau",
+        provider: "Infosys",
+        icon: <Database size={24} />,
+        color: "blue",
+        certificateUrl: "/certificates/Tableau Certficate_page-0001.jpg",
+    },
+    {
+        title: "Google Cloud Career Launchpad Data Analytics track",
+        provider: "Google",
+        icon: <Code size={24} />,
+        color: "blue",
+        certificateUrl: "/certificates/google cloud cert_page-0001.jpg",
+    },
+    {
+        title: "SQL and Relational Databases 101",
+        provider: "IBM",
+        icon: <FileSpreadsheet size={24} />,
+        color: "green",
+        certificateUrl: "/certificates/IBM DB0101EN Certificate _ CognitiveClass_page-0001.jpg",
+    },
+    {
+        title: "Machine Learning with Python",
+        provider: "IBM",
+        icon: <BarChart3 size={24} />,
+        color: "orange",
+        certificateUrl: "/certificates/IBM ML0101EN Certificate _ CognitiveClass_page-0001.jpg",
+    },
+    {
+        title: "Data Visualisation: Empowering Business with Effective Insights",
+        provider: "TATA",
         icon: <Target size={24} />,
         color: "yellow",
-        certificateUrl: "/certificates/leetcode-achievements.pdf",
-        verifyUrl: "https://leetcode.com/u/ShriDhathri"
+        certificateUrl: "/certificates/TATA data Visualisation_page-0001.jpg",
     }
 ]
 
@@ -225,8 +218,6 @@ const CertificationBadge = ({ certification }: { certification: Certification })
             link.href = certification.certificateUrl;
             link.target = '_blank';
             link.click();
-        } else if (certification.verifyUrl) {
-            window.open(certification.verifyUrl, '_blank');
         } else {
             alert('Certificate is being prepared for digital display. Please contact for verification.');
         }

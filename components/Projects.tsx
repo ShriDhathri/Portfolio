@@ -8,18 +8,17 @@ interface Project {
     description: string
     technologies: string[]
     githubUrl: string
-    liveUrl: string
+    liveUrl?: string
     category: string
     status?: string
 }
 
 const projectsData: Project[] = [
     {
-        title: 'Sales Prediction System',
+        title: 'Credit card fraud detection',
         description: 'Machine learning-based system for predicting sales using advanced algorithms and data analysis techniques.',
         technologies: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
-        githubUrl: 'https://github.com/yourusername/sales-prediction',
-        liveUrl: 'https://your-demo-link.com',
+        githubUrl: 'https://github.com/ShriDhathri/Data-Science.git',
         category: 'Machine Learning',
     },
     {
@@ -27,17 +26,15 @@ const projectsData: Project[] = [
         description:
             'Applied Deep Learning methods to identify cancerous and non-cancerous regions. Utilized real-world image data to build a classification model using MobileNet and U-Net. Achieved 85% accuracy, with ongoing efforts to explore new models for improved performance.',
         technologies: ['Python', 'Machine Learning', 'Deep Learning', 'MobileNet', 'U-Net'],
-        githubUrl: 'https://github.com/yourusername/oral-cancer-detection',
-        liveUrl: 'https://your-demo-link.com',
+        githubUrl: 'https://github.com/ShriDhathri/oral-cancer-detection',
         category: 'Deep Learning',
     },
     {
-        title: 'Blinkit Data Analysis',
+        title: 'Breast-Cancer-Detection',
         description:
             'Provided insights into delivery times, customer behavior, and operational efficiency, enabling data-driven decision-making to optimize performance. Developed a dashboard to analyze sales, production, and resource management for efficient business operations.',
         technologies: ['Power BI', 'EDA', 'Data Analysis'],
-        githubUrl: 'https://github.com/yourusername/blinkit-analysis',
-        liveUrl: 'https://your-dashboard-link.com',
+        githubUrl: 'https://github.com/ShriDhathri/Breast-Cancer-Detection.git',
         category: 'Data Analysis',
     },
     {
@@ -45,7 +42,7 @@ const projectsData: Project[] = [
         description:
             'Built a trained chatbot using DialogFlow and integrated it into a food-based website. Enhanced a menu-display website by integrating a responsive chatbot, trained with DialogFlow and implemented using FastAPI as the backend.',
         technologies: ['ML', 'FastAPI', 'DialogFlow', 'Python'],
-        githubUrl: 'https://github.com/yourusername/mira-chatbot',
+        githubUrl: 'https://github.com/ShriDhathri/Mira-ChatBot.git',
         liveUrl: 'https://your-chatbot-demo.com',
         category: 'Web Development',
     },
