@@ -42,7 +42,8 @@ const Header = () => {
         { href: '#skills', label: 'Skills', id: 'skills' },
         { href: '#resume', label: 'Resume', id: 'resume' },
         { href: '#projects', label: 'Projects', id: 'projects' },
-        { href: '#achievements', label: 'Achievements', id: 'achievements' }
+        { href: '#achievements', label: 'Achievements', id: 'achievements' },
+        { href: '#contact', label: 'Contact', id: 'contact' }
     ];
 
     const NavLink = ({ href, label, id, isActive }: { href: string; label: string; id: string; isActive: boolean }) => (
