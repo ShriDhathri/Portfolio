@@ -5,11 +5,10 @@ import Image from 'next/image';
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
-const Hero = () => {
+const home = () => {
   const { theme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -21,7 +20,7 @@ const Hero = () => {
 
   return (
     <section
-      id="hero"
+      id="home"
       className="relative w-full h-screen flex items-center justify-start text-foreground"
     >
       {/* Background Image */}
@@ -87,4 +86,4 @@ function SocialLink({
   );
 }
 
-export default Hero;
+export default home;

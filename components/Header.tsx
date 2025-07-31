@@ -4,15 +4,15 @@ import Link from 'next/link';
 import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
-    const [activeSection, setActiveSection] = useState('hero');
+    const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['hero', 'about', 'skills', 'resume', 'projects', 'achievements'];
+            const sections = ['home', 'about', 'skills', 'resume', 'projects', 'achievements','contact'];
             const scrollPosition = window.scrollY;
 
             if (scrollPosition < 50) {
-                setActiveSection('hero');
+                setActiveSection('home');
                 return;
             }
 
@@ -37,7 +37,7 @@ const Header = () => {
     }, []);
 
     const navItems = [
-        { href: '#hero', label: 'Hero', id: 'hero' }, 
+        { href: '#home', label: 'Home', id: 'home' }, 
         { href: '#about', label: 'About', id: 'about' },
         { href: '#skills', label: 'Skills', id: 'skills' },
         { href: '#resume', label: 'Resume', id: 'resume' },
