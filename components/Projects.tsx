@@ -127,15 +127,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     <Github size={16} />
                     View Code
                 </a>
-                <a
-                    href={project.liveUrl}
-                    className="flex items-center gap-2 px-4 py-2 bg-foreground/10 text-foreground rounded hover:bg-foreground/20 transition-colors text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <ExternalLink size={16} />
-                    Live Demo
-                </a>
+                {project.liveUrl && (
+                    <a
+                        href={project.liveUrl}
+                        className="flex items-center gap-2 px-4 py-2 bg-foreground/10 text-foreground rounded hover:bg-foreground/20 transition-colors text-sm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <ExternalLink size={16} />
+                        Live Demo
+                    </a>
+                )}
             </div>
 
             {/* Hover Border Effect */}

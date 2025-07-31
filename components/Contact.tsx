@@ -3,6 +3,9 @@
 import React, { useState } from 'react'
 import { MapPin, Phone, Mail, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
+// Optional: If TypeScript complains, install types or add //@ts-ignore before emailjs import
+// npm install --save-dev @types/emailjs-com
+
 const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null)
@@ -10,15 +13,12 @@ const Contact = () => {
         name: '',
         email: '',
         subject: '',
-        message: ''
+        message: '',
     })
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }))
+        setFormData(prev => ({ ...prev, [name]: value }))
     }
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -88,23 +88,49 @@ const Contact = () => {
                     <div className="bg-background border border-green-500/20 rounded-lg p-6">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-4">
-                                <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} required
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your Name"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    required
                                     className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
                                 />
-                                <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} required
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Your Email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    required
                                     className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
                                 />
                             </div>
 
-                            <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleInputChange} required
+                            <input
+                                type="text"
+                                name="subject"
+                                placeholder="Subject"
+                                value={formData.subject}
+                                onChange={handleInputChange}
+                                required
                                 className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
                             />
 
-                            <textarea name="message" rows={6} placeholder="Your Message" value={formData.message} onChange={handleInputChange} required
+                            <textarea
+                                name="message"
+                                rows={6}
+                                placeholder="Your Message"
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                required
                                 className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors resize-vertical"
                             />
 
-                            <button type="submit" disabled={isSubmitting}
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
                                 className="w-full md:w-auto px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 font-medium"
                             >
                                 {isSubmitting ? (
@@ -142,9 +168,9 @@ const Contact = () => {
 }
 
 interface ContactInfoProps {
-    icon: React.ReactNode;
-    title: string;
-    content: string;
+    icon: React.ReactNode
+    title: string
+    content: string
 }
 
 const ContactInfo = ({ icon, title, content }: ContactInfoProps) => {
