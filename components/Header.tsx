@@ -8,7 +8,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['home', 'about', 'skills', 'resume', 'projects', 'achievements','contact'];
+            const sections = ['home', 'about', 'skills', 'resume', 'projects', 'achievements', 'contact'];
             const scrollPosition = window.scrollY;
 
             if (scrollPosition < 50) {
@@ -31,13 +31,13 @@ const Header = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
+        handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const navItems = [
-        { href: '#home', label: 'Home', id: 'home' }, 
+        { href: '#home', label: 'Home', id: 'home' },
         { href: '#about', label: 'About', id: 'about' },
         { href: '#skills', label: 'Skills', id: 'skills' },
         { href: '#resume', label: 'Resume', id: 'resume' },
@@ -50,16 +50,16 @@ const Header = () => {
         <Link
             href={href}
             className={`relative font-semibold text-lg transition-all duration-300 group ${isActive
-                    ? 'text-green-600'
-                    : 'text-foreground hover:text-green-600'
+                ? 'text-green-600'
+                : 'text-foreground hover:text-green-600'
                 }`}
             onClick={() => setActiveSection(id)}
         >
             {label}
             <span
                 className={`absolute -bottom-1 left-0 h-0.5 bg-green-600 transition-all duration-300 ${isActive
-                        ? 'w-full'
-                        : 'w-0 group-hover:w-full'
+                    ? 'w-full'
+                    : 'w-0 group-hover:w-full'
                     }`}
             />
         </Link>
