@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
-const home = () => {
+const Home = () => {
   const { theme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -35,7 +35,7 @@ const home = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-start px-6 md:px-12 max-w-4xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-background/80 text-foreground text-balance p-2 rounded-md">
-          I'm Shri Dhatri P M
+          I&#39;m Shri Dhatri P M
         </h1>
         <p className="text-lg md:text-xl bg-background/80 text-foreground mb-6 p-2 rounded-md">
           Data Analyst, Data Enthusiast
@@ -100,4 +100,4 @@ function SocialLink({
   );
 }
 
-export default home;
+export default Home;

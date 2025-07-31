@@ -45,8 +45,9 @@ export default function About() {
                                         Data analyst & Data Enthusiasts
                                     </h1>
                                     <p className="text-foreground text-lg italic mb-8">
-                                        Hello, I'm Shri Dhatri P M, a student of Computer Science in Data Science Engineering from Alva's Institute of Engineering & Technology (VTU), Karnataka. I'm passionate about Data Science.
+                                        Hello, I&#39;m Shri Dhatri P M, a student of Computer Science in Data Science Engineering from Alva&#39;s Institute of Engineering &amp; Technology (VTU), Karnataka. I&#39;m passionate about Data Science.
                                     </p>
+
                                 </div>
 
                                 {/* Info Grid */}

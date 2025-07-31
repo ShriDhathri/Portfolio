@@ -13,7 +13,6 @@ const Contact = () => {
         message: ''
     })
 
-
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target
         setFormData(prev => ({
@@ -27,7 +26,6 @@ const Contact = () => {
         setIsSubmitting(true)
         setSubmitStatus(null)
 
-        // Validate form data
         if (!formData.name || !formData.email || !formData.subject || !formData.message) {
             setSubmitStatus('error')
             setIsSubmitting(false)
@@ -43,9 +41,7 @@ const Contact = () => {
         }
 
         try {
-            // Import emailjs dynamically to avoid SSR issues
             const emailjs = (await import('emailjs-com')).default
-
             await emailjs.send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
@@ -54,20 +50,12 @@ const Contact = () => {
             )
 
             setSubmitStatus('success')
-
-            // Reset form
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            })
+            setFormData({ name: '', email: '', subject: '', message: '' })
         } catch (error) {
             console.error('EmailJS Error:', error)
             setSubmitStatus('error')
         } finally {
             setIsSubmitting(false)
-            // Auto-hide status message after 5 seconds
             setTimeout(() => setSubmitStatus(null), 5000)
         }
     }
@@ -75,7 +63,6 @@ const Contact = () => {
     return (
         <section id="contact" className="bg-background text-foreground py-16 px-6 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
-                {/* Header Section */}
                 <div className="mb-12">
                     <h1 className="text-4xl font-bold text-foreground mb-4">Contact</h1>
                     <p className="text-muted-foreground text-lg">
@@ -84,118 +71,59 @@ const Contact = () => {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12">
-                    {/* Contact Information */}
                     <div className="space-y-8">
-                        <ContactInfo
-                            icon={<MapPin size={24} />}
-                            title="Location"
-                            content="Shivamogga, Karnataka, India"
-                        />
-
-                        <ContactInfo
-                            icon={<Phone size={24} />}
-                            title="Call"
-                            content="+91 6362925156"
-                        />
-
-                        <ContactInfo
-                            icon={<Mail size={24} />}
-                            title="Email"
-                            content="dhathridhatu@gmail.com"
-                        />
-
-                        {/* Additional Info */}
+                        <ContactInfo icon={<MapPin size={24} />} title="Location" content="Shivamogga, Karnataka, India" />
+                        <ContactInfo icon={<Phone size={24} />} title="Call" content="+91 6362925156" />
+                        <ContactInfo icon={<Mail size={24} />} title="Email" content="dhathridhatu@gmail.com" />
                         <div className="mt-8 p-6 bg-green-500/10 border border-green-500/20 rounded-lg">
-                            <h3 className="text-lg font-semibold text-foreground mb-2">Let's Connect!</h3>
+                            <h3 className="text-lg font-semibold text-foreground mb-2">Let&#39;s Connect!</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                I'm always excited to discuss new opportunities, collaborate on interesting projects,
+                                I&#39;m always excited to discuss new opportunities, collaborate on interesting projects,
                                 or simply connect with fellow data enthusiasts. Whether you have a question about
                                 my work or want to explore potential collaborations, feel free to reach out!
                             </p>
                         </div>
                     </div>
 
-                    {/* Contact Form */}
                     <div className="bg-background border border-green-500/20 rounded-lg p-6">
                         <form onSubmit={handleSubmit} className="space-y-6">
-                            {/* Name and Email Row */}
                             <div className="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        placeholder="Your Name"
-                                        value={formData.name}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
-                                    />
-                                </div>
-                                <div>
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="Your Email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Subject */}
-                            <div>
-                                <input
-                                    type="text"
-                                    name="subject"
-                                    placeholder="Subject"
-                                    value={formData.subject}
-                                    onChange={handleInputChange}
-                                    required
+                                <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} required
+                                    className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
+                                />
+                                <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} required
                                     className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
                                 />
                             </div>
 
-                            {/* Message */}
-                            <div>
-                                <textarea
-                                    name="message"
-                                    rows={6}
-                                    placeholder="Your Message"
-                                    value={formData.message}
-                                    onChange={handleInputChange}
-                                    required
-                                    className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors resize-vertical"
-                                />
-                            </div>
+                            <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleInputChange} required
+                                className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors"
+                            />
 
-                            {/* Submit Button */}
-                            <div>
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="w-full md:w-auto px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 font-medium"
-                                >
-                                    {isSubmitting ? (
-                                        <>
-                                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                                            Sending...
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Send size={18} />
-                                            Send Message
-                                        </>
-                                    )}
-                                </button>
-                            </div>
+                            <textarea name="message" rows={6} placeholder="Your Message" value={formData.message} onChange={handleInputChange} required
+                                className="w-full px-4 py-3 bg-background border border-foreground/20 rounded-md focus:border-green-500 focus:outline-none text-foreground placeholder-muted-foreground transition-colors resize-vertical"
+                            />
 
-                            {/* Status Messages */}
+                            <button type="submit" disabled={isSubmitting}
+                                className="w-full md:w-auto px-8 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2 font-medium"
+                            >
+                                {isSubmitting ? (
+                                    <>
+                                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                                        Sending...
+                                    </>
+                                ) : (
+                                    <>
+                                        <Send size={18} />
+                                        Send Message
+                                    </>
+                                )}
+                            </button>
+
                             {submitStatus === 'success' && (
                                 <div className="flex items-center gap-2 text-green-600 bg-green-500/10 p-3 rounded-md">
                                     <CheckCircle size={18} />
-                                    <span className="text-sm">Message sent successfully! I'll get back to you soon.</span>
+                                    <span className="text-sm">Message sent successfully! I&#39;ll get back to you soon.</span>
                                 </div>
                             )}
 
