@@ -73,11 +73,25 @@ function SocialLink({
   icon: React.ReactNode;
   label: string;
 }) {
+  // Define specific hover colors for each platform
+  const getHoverClass = (label: string) => {
+    switch (label.toLowerCase()) {
+      case 'linkedin':
+        return 'hover:bg-blue-600 hover:text-white';
+      case 'github':
+        return 'hover:bg-gray-800 hover:text-white';
+      case 'instagram':
+        return 'hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-400 hover:text-white';
+      default:
+        return 'hover:bg-blue-500 hover:text-white';
+    }
+  };
+
   return (
     <a
       href={href}
       aria-label={label}
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-background text-foreground hover:bg-orange-500 transition-colors duration-300"
+      className={`w-10 h-10 flex items-center justify-center rounded-full bg-background text-foreground transition-all duration-300 ${getHoverClass(label)}`}
       target="_blank"
       rel="noopener noreferrer"
     >
