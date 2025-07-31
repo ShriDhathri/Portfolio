@@ -83,8 +83,9 @@ const Resume = () => {
                                 </h3>
                                 <p className="text-sm text-foreground mt-1">2021 - 2025</p>
                                 <p className="italic text-foreground mt-1">
-                                    Alva's Institute of Engineering & Technology (VTU), Karnataka
+                                    Alva&#39;s Institute of Engineering &amp; Technology (VTU), Karnataka
                                 </p>
+
                                 <p className="text-foreground mt-2 text-sm">
                                     Specialized in Data Science Engineering with focus on machine learning, Python programming, and data analysis. Actively involved in research projects and practical applications of data science.
                                 </p>
