@@ -3,8 +3,13 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata = {
-  title: 'Your App',
-  description: 'App description',
+  title: 'Dhathri P M - Portfolio',
+  description: 'Data Analyst Portfolio of Dhathri P M',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -64,7 +64,10 @@ const Contact = () => {
         <section id="contact" className="bg-background text-foreground py-16 px-6 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-12">
-                    <h1 className="text-4xl font-bold text-foreground mb-4">Contact</h1>
+                    <div className="inline-block mb-4">
+                        <h1 className="text-4xl font-bold text-foreground mb-1">Contact</h1>
+                        <div className="h-1 bg-green-500 w-full" />
+                    </div>
                     <p className="text-muted-foreground text-lg">
                         Get in touch with me for any questions or opportunities.
                     </p>
