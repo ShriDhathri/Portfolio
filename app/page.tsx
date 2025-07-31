@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import Achievements from '@/components/Achievement';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
@@ -14,6 +15,7 @@ export default function Home() {
       <Skills />
       <Resume />
       <Projects />
+      <Achievements />
       <Contact />
       <Footer />
     </main>
