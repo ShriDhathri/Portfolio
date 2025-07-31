@@ -5,8 +5,8 @@ import React from 'react'
 const Resume = () => {
     const handleDownloadResume = () => {
         const link = document.createElement('a')
-        link.href = '/resume/Dhatri_P_M.pdf'
-        link.download = 'Dhatri_P_M.pdf'
+        link.href = '/resume/Dhathri_P_M.pdf'
+        link.download = 'Dhathri_P_M.pdf'
         document.body.appendChild(link)
         link.click()
         document.body.removeChild(link)

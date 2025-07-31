@@ -73,9 +73,9 @@ const Header = () => {
             <div className="flex justify-between items-center p-4 md:p-6">
                 {/* Logo */}
                 <div>
-                    <h1 className="text-foreground text-2xl md:text-4xl font-bold hover:scale-105 transition-transform duration-300 cursor-pointer">
-                        <span className="hidden sm:inline">Shri Dhatri PM</span>
-                        <span className="sm:hidden">Shri Dhatri</span>
+                    <h1 className="text-foreground text-2xl md:text-4xl font-bold  transition-transform duration-300">
+                        <span className="hidden sm:inline">Shri Dhathri PM</span>
+                        <span className="sm:hidden">Shri Dhathri</span>
                     </h1>
                 </div>
 

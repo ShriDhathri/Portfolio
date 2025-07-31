@@ -43,7 +43,7 @@ const projectsData: Project[] = [
             'Built a trained chatbot using DialogFlow and integrated it into a food-based website. Enhanced a menu-display website by integrating a responsive chatbot, trained with DialogFlow and implemented using FastAPI as the backend.',
         technologies: ['ML', 'FastAPI', 'DialogFlow', 'Python'],
         githubUrl: 'https://github.com/ShriDhathri/Mira-ChatBot.git',
-        liveUrl: 'https://your-chatbot-demo.com',
+        // liveUrl: 'https://your-chatbot-demo.com',
         category: 'Web Development',
     },
 ]

@@ -24,42 +24,46 @@ const Home = () => {
       className="relative w-full h-screen flex items-center justify-start text-foreground"
     >
       {/* Background Image */}
-      <Image
-        src={backgroundImage}
-        alt="Hero Background"
-        fill
-        className="object-cover z-0"
-        priority
-      />
+      <div className="relative w-full h-screen">
+        {/* Background Image */}
+        <Image
+          src={backgroundImage}
+          alt="Hero Background"
+          fill
+          className="object-cover z-0"
+          priority
+        />
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-start px-6 md:px-12 max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-background/80 text-foreground text-balance p-2 rounded-md">
-          I&#39;m Shri Dhatri P M
-        </h1>
-        <p className="text-lg md:text-xl bg-background/80 text-foreground mb-6 p-2 rounded-md">
-          Data Analyst, Data Enthusiast
-        </p>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-start px-6 md:px-12 max-w-4xl h-full justify-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-background/80 text-foreground text-balance p-2 rounded-md">
+            I&apos;m Shri Dhathri P M
+          </h1>
+          <p className="text-lg md:text-xl bg-background/80 text-foreground mb-6 p-2 rounded-md">
+            Data Analyst, Data Enthusiast
+          </p>
 
-        {/* Social Links */}
-        <div className="flex gap-6">
-          <SocialLink
-            href="https://github.com/ShriDhathri"
-            icon={<Github size={20} />}
-            label="GitHub"
-          />
-          <SocialLink
-            href="https://www.instagram.com/dhathri_dhatu/"
-            icon={<Instagram size={20} />}
-            label="Instagram"
-          />
-          <SocialLink
-            href="https://www.linkedin.com/in/shri-dhathri/"
-            icon={<Linkedin size={20} />}
-            label="LinkedIn"
-          />
+          {/* Social Links */}
+          <div className="flex gap-6">
+            <SocialLink
+              href="https://github.com/ShriDhathri"
+              icon={<Github size={20} />}
+              label="GitHub"
+            />
+            <SocialLink
+              href="https://www.instagram.com/dhathri_dhatu/"
+              icon={<Instagram size={20} />}
+              label="Instagram"
+            />
+            <SocialLink
+              href="https://www.linkedin.com/in/shri-dhathri/"
+              icon={<Linkedin size={20} />}
+              label="LinkedIn"
+            />
+          </div>
         </div>
       </div>
+
     </section>
   );
 };

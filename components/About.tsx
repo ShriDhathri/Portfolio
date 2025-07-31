@@ -45,7 +45,7 @@ export default function About() {
                                         Data analyst & Data Enthusiasts
                                     </h1>
                                     <p className="text-foreground text-lg italic mb-8">
-                                        Hello, I&#39;m Shri Dhatri P M, a student of Computer Science in Data Science Engineering from Alva&#39;s Institute of Engineering &amp; Technology (VTU), Karnataka. I&#39;m passionate about Data Science.
+                                        Hello, I&#39;m Shri Dhathri P M, a student of Computer Science in Data Science Engineering from Alva&#39;s Institute of Engineering &amp; Technology (VTU), Karnataka. I&#39;m passionate about Data Science.
                                     </p>
 
                                 </div>
@@ -53,7 +53,7 @@ export default function About() {
                                 {/* Info Grid */}
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="space-y-4">
-                                        <InfoItem label="Name:" value="Shri Dhatri P M" />
+                                        <InfoItem label="Name:" value="Shri Dhathri P M" />
                                         <InfoItem label="Age:" value="22" />
                                         <InfoItem label="Phone:" value="+91 6362925156" />
                                         <InfoItem label="City:" value="Shivamogga" />
