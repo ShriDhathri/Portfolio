@@ -29,13 +29,16 @@ const Achievements = () => {
     return (
         <section id="achievements" className="bg-background text-foreground py-16 px-6 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-foreground mb-4">Achievements & Certifications</h1>
-                    <div className="w-24 h-1 bg-green-500 mx-auto mb-6"></div>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                <div className="mb-16">
+                    <div className="inline-block mb-2">
+                        <h1 className="text-4xl font-bold text-foreground mb-1">Achievements & Certifications</h1>
+                        <div className="h-1 bg-green-500 w-full" />
+                    </div>
+                    <p className="text-muted-foreground text-lg whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
                         Recognition and accomplishments in data science, research, and technology that showcase my dedication to excellence.
                     </p>
                 </div>
+
 
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold text-foreground mb-8 text-center">Major Achievements</h2>

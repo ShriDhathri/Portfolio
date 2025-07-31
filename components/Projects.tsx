@@ -20,32 +20,35 @@ const projectsData: Project[] = [
         technologies: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn'],
         githubUrl: 'https://github.com/yourusername/sales-prediction',
         liveUrl: 'https://your-demo-link.com',
-        category: 'Machine Learning'
+        category: 'Machine Learning',
     },
     {
         title: 'Oral Cancer Detection',
-        description: 'Applied Deep Learning methods to identify cancerous and non-cancerous regions. Utilized real-world image data to build a classification model using MobileNet and U-Net. Achieved 85% accuracy, with ongoing efforts to explore new models for improved performance.',
+        description:
+            'Applied Deep Learning methods to identify cancerous and non-cancerous regions. Utilized real-world image data to build a classification model using MobileNet and U-Net. Achieved 85% accuracy, with ongoing efforts to explore new models for improved performance.',
         technologies: ['Python', 'Machine Learning', 'Deep Learning', 'MobileNet', 'U-Net'],
         githubUrl: 'https://github.com/yourusername/oral-cancer-detection',
         liveUrl: 'https://your-demo-link.com',
-        category: 'Deep Learning'
+        category: 'Deep Learning',
     },
     {
         title: 'Blinkit Data Analysis',
-        description: 'Provided insights into delivery times, customer behavior, and operational efficiency, enabling data-driven decision-making to optimize performance. Developed a dashboard to analyze sales, production, and resource management for efficient business operations.',
+        description:
+            'Provided insights into delivery times, customer behavior, and operational efficiency, enabling data-driven decision-making to optimize performance. Developed a dashboard to analyze sales, production, and resource management for efficient business operations.',
         technologies: ['Power BI', 'EDA', 'Data Analysis'],
         githubUrl: 'https://github.com/yourusername/blinkit-analysis',
         liveUrl: 'https://your-dashboard-link.com',
-        category: 'Data Analysis'
+        category: 'Data Analysis',
     },
     {
         title: 'Mira-ChatBot',
-        description: 'Built a trained chatbot using DialogFlow and integrated it into a food-based website. Enhanced a menu-display website by integrating a responsive chatbot, trained with DialogFlow and implemented using FastAPI as the backend.',
+        description:
+            'Built a trained chatbot using DialogFlow and integrated it into a food-based website. Enhanced a menu-display website by integrating a responsive chatbot, trained with DialogFlow and implemented using FastAPI as the backend.',
         technologies: ['ML', 'FastAPI', 'DialogFlow', 'Python'],
         githubUrl: 'https://github.com/yourusername/mira-chatbot',
         liveUrl: 'https://your-chatbot-demo.com',
-        category: 'Web Development'
-    }
+        category: 'Web Development',
+    },
 ]
 
 const Projects = () => {
@@ -53,12 +56,16 @@ const Projects = () => {
         <section id="projects" className="bg-background text-foreground py-16 px-6 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
                 {/* Header Section */}
-                <div className="mb-12">
-                    <h1 className="text-4xl font-bold text-foreground mb-4">Projects</h1>
-                    <p className="text-muted-foreground text-lg">
+                <div className="text-left mb-12">
+                    <div className="inline-block mb-4">
+                        <h1 className="text-4xl font-bold text-foreground mb-1">Projects</h1>
+                        <div className="h-1 bg-green-500 w-full" />
+                    </div>
+                    <p className="text-muted-foreground text-lg whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
                         Showcase of my technical projects and applications built with various technologies.
                     </p>
                 </div>
+
 
                 {/* Projects Grid */}
                 <div className="grid md:grid-cols-2 gap-8">
@@ -96,9 +103,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </h3>
 
             {/* Description */}
-            <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                {project.description}
-            </p>
+            <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
 
             {/* Technologies */}
             <div className="mb-6">
