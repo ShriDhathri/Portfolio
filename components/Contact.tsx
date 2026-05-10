@@ -76,7 +76,6 @@ const Contact = () => {
                 <div className="grid lg:grid-cols-2 gap-12">
                     <div className="space-y-8">
                         <ContactInfo icon={<MapPin size={24} />} title="Location" content="Shivamogga, Karnataka, India" />
-                        <ContactInfo icon={<Phone size={24} />} title="Call" content="+91 6362925156" />
                         <ContactInfo icon={<Mail size={24} />} title="Email" content="dhathridhatu@gmail.com" />
                         <div className="mt-8 p-6 bg-green-500/10 border border-green-500/20 rounded-lg">
                             <h3 className="text-lg font-semibold text-foreground mb-2">Let&#39;s Connect!</h3>
