@@ -55,7 +55,6 @@ export default function About() {
                                     <div className="space-y-4">
                                         <InfoItem label="Name:" value="Shri Dhathri P M" />
                                         <InfoItem label="Age:" value="22" />
-                                        <InfoItem label="Phone:" value="+91 6362925156" />
                                         <InfoItem label="City:" value="Shivamogga" />
                                     </div>
                                     <div className="space-y-4">
